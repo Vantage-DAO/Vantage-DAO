@@ -1,8 +1,9 @@
-This document lists the minimum bet support required for different betting markets.
+This document lists the minimum voting support required for different betting markets.
 
 football_match_outright="0.25"
-football_handicap_positive="0.18"
-football_handicap_negative="0.22"
+football_ft_handicap_positive="0.18"
+football_ft_handicap_negative="0.22"
+football_ht_handicaps_all="0.2"
 football_scorer="0.125"
 football_over_under="0.2"
 
