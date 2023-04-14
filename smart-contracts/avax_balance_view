@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Set the Avalanche network ID and API endpoint URL
+network="X"
+url="https://api.avax.network/ext/bc/$network/rpc"
+
+# Set the AVAX account address
+address="0x1234567890123456789012345678901234567890"
+
+# Set the JSON-RPC request body
+data='{"jsonrpc":"2.0","method":"avm.getBalance","params":{"address":"'$address'","assetID":"AVAX"},"id":1}'
+
+# Make the HTTP POST request to the JSON-RPC endpoint using curl
+response=$(curl -X POST --data "$data" $url)
+
+# Parse the response to extract the balance
+balance=$(echo $response | jq -r '.result.balance')
+
+echo "Account balance: $balance"
